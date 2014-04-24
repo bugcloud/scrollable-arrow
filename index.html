@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2">
+
+<title>scrollable-arrow</title>
+<style>
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.parent-box {
+  background: #dadada;
+  height: 100px;
+  margin: 32px;
+  overflow: auto;
+  width: 200px;
+}
+
+.child-box {
+  padding: 8px;
+  white-space: nowrap;
+}
+</style>
+
+<div class="parent-box">
+  <div class="child-box">
+    <p>The width of this content is greater than the parent box element's width.</p>
+  </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery.scrollable-arrow.js"></script>
+<script>
+  $(function() {
+    $(".child-box").scrollableArrow({
+      parentBox: '.parent-box'
+    });
+  });
+</script>
