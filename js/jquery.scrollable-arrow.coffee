@@ -1,3 +1,10 @@
+###
+# scrollable-allow
+#
+# jQuery plugin displaying scrollable arrow mark on a block element.
+# https://github.com/bugcloud/scrollable-arrow
+###
+
 $ = jQuery
 $.fn.scrollableArrow = (opt) ->
   default_options =
