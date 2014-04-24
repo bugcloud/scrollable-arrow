@@ -36,6 +36,8 @@ $.fn.scrollableArrow = (opt) ->
       overflow: "auto"
     $parent.prepend arrowsHtml
     $that_.detach().appendTo $wrapper
+    $parent.find(".#{options.leftArrowClass}").remove() if options.leftArrow is false
+    $parent.find(".#{options.rightArrowClass}").remove() if options.rightArrow is false
 
     $arrows = $parent.find '.scrollable-arrows-container'
     $arrows.css

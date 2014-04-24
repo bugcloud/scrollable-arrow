@@ -29,6 +29,8 @@ The default value is ```.scrollable-allow-parent-box```
 ### leftArrow, rightArrow
 _(string)_ The content of arrow mark. You can use html string.
 
+if you set ```false```, arrow mark will not show.
+
 The default values are ```◀◀◀``` and ```▶▶▶```
 
 

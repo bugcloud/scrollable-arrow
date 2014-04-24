@@ -40,6 +40,12 @@
       });
       $parent.prepend(arrowsHtml);
       $that_.detach().appendTo($wrapper);
+      if (options.leftArrow === false) {
+        $parent.find("." + options.leftArrowClass).remove();
+      }
+      if (options.rightArrow === false) {
+        $parent.find("." + options.rightArrowClass).remove();
+      }
       $arrows = $parent.find('.scrollable-arrows-container');
       $arrows.css({
         position: 'relative',
