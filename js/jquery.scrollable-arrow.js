@@ -30,12 +30,12 @@
         width: $parent.width(),
         height: $parent.height()
       };
-      currentPositionStyle = $that_.css('position');
-      $that_.css('position', 'absolute');
       realContextSize = {
         width: $that_.width(),
         height: $that_.height()
       };
+      currentPositionStyle = $that_.css('position');
+      $that_.css('position', 'absolute');
       $that_.css('position', currentPositionStyle);
       arrowsHtml = "<div class='scrollable-arrows-container'>\n  <div class='" + options.leftArrowClass + "'>" + options.leftArrow + "</div>\n  <div class='" + options.rightArrowClass + "'>" + options.rightArrow + "</div>\n</div>";
       $parent.prepend("<div class='scrollable-arrows-wrapper'></div>");

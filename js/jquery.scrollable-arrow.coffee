@@ -21,11 +21,11 @@ $.fn.scrollableArrow = (opt) ->
     parentSize =
       width: $parent.width()
       height: $parent.height()
-    currentPositionStyle = $that_.css 'position'
-    $that_.css 'position', 'absolute'
     realContextSize =
       width: $that_.width()
       height: $that_.height()
+    currentPositionStyle = $that_.css 'position'
+    $that_.css 'position', 'absolute'
     $that_.css 'position', currentPositionStyle
 
     arrowsHtml = """
