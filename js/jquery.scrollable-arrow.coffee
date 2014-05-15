@@ -66,13 +66,21 @@ $.fn.scrollableArrow = (opt) ->
     setInterval () ->
       scrollLeft = $wrapper.scrollLeft()
       if scrollLeft is 0
-        $leftArrow.hide() if $leftArrow.is(':visible')
+        if $leftArrow.is(':visible')
+          $leftArrow.hide()
+          $leftArrow.trigger 'sa.hide'
       else
-        $leftArrow.show() unless $leftArrow.is(':visible')
+        unless $leftArrow.is(':visible')
+          $leftArrow.show()
+          $leftArrow.trigger 'sa.show'
 
       if scrollLeft + parentSize.width >= realContextSize.width
-        $rightArrow.hide() if $rightArrow.is(':visible')
+        if $rightArrow.is(':visible')
+          $rightArrow.hide()
+          $rightArrow.trigger 'sa.hide'
       else
-        $rightArrow.show() unless $rightArrow.is(':visible')
+        unless $rightArrow.is(':visible')
+          $rightArrow.show()
+          $rightArrow.trigger 'sa.show'
     , 200
 

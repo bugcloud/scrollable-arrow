@@ -79,19 +79,23 @@
         if (scrollLeft === 0) {
           if ($leftArrow.is(':visible')) {
             $leftArrow.hide();
+            $leftArrow.trigger('sa.hide');
           }
         } else {
           if (!$leftArrow.is(':visible')) {
             $leftArrow.show();
+            $leftArrow.trigger('sa.show');
           }
         }
         if (scrollLeft + parentSize.width >= realContextSize.width) {
           if ($rightArrow.is(':visible')) {
-            return $rightArrow.hide();
+            $rightArrow.hide();
+            return $rightArrow.trigger('sa.hide');
           }
         } else {
           if (!$rightArrow.is(':visible')) {
-            return $rightArrow.show();
+            $rightArrow.show();
+            return $rightArrow.trigger('sa.show');
           }
         }
       }, 200);
